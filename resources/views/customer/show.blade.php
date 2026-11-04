@@ -21,7 +21,7 @@
         <div class="lg:col-span-3">
             <div class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
                 <div class="aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                    <img src="{{ $costume->image_url }}" alt="{{ $costume->name }}" class="h-full w-full object-cover">
+                    <img src="{{ $costume->image_url }}" alt="{{ $costume->name }}" onerror="this.onerror=null;this.src='{{ asset('images/costume-placeholder.svg') }}';" class="h-full w-full object-cover">
                 </div>
             </div>
 

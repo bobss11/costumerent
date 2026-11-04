@@ -48,7 +48,7 @@
                             <td class="px-5 py-3">
                                 <div class="flex items-center gap-3">
                                     <div class="h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-slate-100">
-                                        <img src="{{ $costume->image_url }}" alt="{{ $costume->name }}" class="h-full w-full object-cover">
+                                        <img src="{{ $costume->image_url }}" alt="{{ $costume->name }}" onerror="this.onerror=null;this.src='{{ asset('images/costume-placeholder.svg') }}';" class="h-full w-full object-cover">
                                     </div>
                                     <div>
                                         <p class="font-semibold text-slate-800">{{ $costume->name }}</p>

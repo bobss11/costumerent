@@ -41,7 +41,7 @@
                     <div class="flex flex-col gap-4 border-b border-slate-100 p-5 sm:flex-row sm:items-center sm:justify-between">
                         <div class="flex items-center gap-4">
                             <div class="h-16 w-16 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100">
-                                <img src="{{ $rental->costume->image_url }}" alt="{{ $rental->costume->name }}" class="h-full w-full object-cover">
+                                <img src="{{ $rental->costume->image_url }}" alt="{{ $rental->costume->name }}" onerror="this.onerror=null;this.src='{{ asset('images/costume-placeholder.svg') }}';" class="h-full w-full object-cover">
                             </div>
                             <div>
                                 <p class="font-mono text-xs font-semibold text-indigo-600">{{ $rental->rental_code }}</p>

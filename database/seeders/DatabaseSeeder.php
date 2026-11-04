@@ -10,7 +10,6 @@ use App\Models\ReturnInspection;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -135,7 +134,7 @@ class DatabaseSeeder extends Seeder
                 'stock_total' => 6,
                 'stock_available' => 6,
                 'accessories_included' => 'Beskap, Kebaya Beludru, Kain Jarik, Blangkon, Keris Properti',
-                'image_url' => 'https://images.unsplash.com/photo-1601933470928-c6ecbf0f43f3?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Javanese_Surakarta_Bride.jpg/960px-Javanese_Surakarta_Bride.jpg',
                 'description' => 'Set busana adat Jawa Solo lengkap untuk pernikahan tradisional maupun acara budaya.',
             ],
             // 2. Pakaian Adat Koto Gadang Minangkabau (spec item 2).
@@ -151,7 +150,7 @@ class DatabaseSeeder extends Seeder
                 'stock_total' => 4,
                 'stock_available' => 4,
                 'accessories_included' => 'Baju Kurung, Tingkuluak Talakuang, Songket, Kalung Gadang',
-                'image_url' => 'https://images.unsplash.com/photo-1555212697-194d092e3b8f?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Tingkuluak_Tanduak_Bundo_kanduang.jpg/960px-Tingkuluak_Tanduak_Bundo_kanduang.jpg',
                 'description' => 'Busana adat Koto Gadang khas Minangkabau dengan songket dan tingkuluak khas.',
             ],
             // 3. Baju Bodo Adat Bugis Makassar (spec item 3).
@@ -167,7 +166,7 @@ class DatabaseSeeder extends Seeder
                 'stock_total' => 8,
                 'stock_available' => 8,
                 'accessories_included' => 'Baju Bodo, Sarung Sutra, Mahkota Saloko, Gelang Panjang',
-                'image_url' => 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Gadis_Bugis_memakai_Baju_Bodo_yang_sudah_di_tokko_%28dikeraskan%29_sekitar_1920_-_1940.jpg/960px-Gadis_Bugis_memakai_Baju_Bodo_yang_sudah_di_tokko_%28dikeraskan%29_sekitar_1920_-_1940.jpg',
                 'description' => 'Busana adat Baju Bodo khas Bugis Makassar dengan sarung sutra dan mahkota saloko.',
             ],
             // 4. Kostum Karnaval Garuda Nusantara Gold (spec item 4).
@@ -183,7 +182,7 @@ class DatabaseSeeder extends Seeder
                 'stock_total' => 3,
                 'stock_available' => 3,
                 'accessories_included' => 'Sayap Punggung, Mahkota Garuda, Chestplate, Pelindung Lengan',
-                'image_url' => 'https://images.unsplash.com/photo-1514446268004-2d0b9e9d2d5c?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Grand_Carnival_-_Jember_Fashion_Carnaval_2023.jpg/960px-Grand_Carnival_-_Jember_Fashion_Carnaval_2023.jpg',
                 'description' => 'Kostum karnaval Garuda Nusantara emas yang megah untuk pawai dan pertunjukan.',
             ],
             // 5. Kostum Pejuang Kemerdekaan / Bung Tomo (spec item 5).
@@ -199,7 +198,7 @@ class DatabaseSeeder extends Seeder
                 'stock_total' => 10,
                 'stock_available' => 10,
                 'accessories_included' => 'Kemeja Safari, Celana, Sabuk Kulit, Topi Peci Pejuang, Pin Garuda',
-                'image_url' => 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bung_Tomo.jpg/960px-Bung_Tomo.jpg',
                 'description' => 'Kostum pejuang kemerdekaan bergaya Bung Tomo untuk drama sejarah dan peringatan kemerdekaan.',
             ],
             // 6. Kimono Haori Tradisional Jepang (spec item 6).
@@ -215,7 +214,7 @@ class DatabaseSeeder extends Seeder
                 'stock_total' => 5,
                 'stock_available' => 5,
                 'accessories_included' => 'Kimono, Obi Belt, Geta Sandals, Kipas Lipat',
-                'image_url' => 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/A_Japanese_woman_wearing_a_Furisode_and_Japanese_traditional_garden.jpg/960px-A_Japanese_woman_wearing_a_Furisode_and_Japanese_traditional_garden.jpg',
                 'description' => 'Kimono Haori tradisional Jepang untuk cosplay, foto bertema, dan acara budaya Jepang.',
             ],
         ];

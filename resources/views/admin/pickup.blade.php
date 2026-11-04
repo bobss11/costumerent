@@ -27,7 +27,7 @@
                     <p class="font-mono text-xs font-semibold text-indigo-600">{{ $rental->rental_code }}</p>
                     <div class="mt-3 flex items-center gap-4">
                         <div class="h-16 w-16 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100">
-                            <img src="{{ $rental->costume->image_url }}" alt="{{ $rental->costume->name }}" class="h-full w-full object-cover">
+                            <img src="{{ $rental->costume->image_url }}" alt="{{ $rental->costume->name }}" onerror="this.onerror=null;this.src='{{ asset('images/costume-placeholder.svg') }}';" class="h-full w-full object-cover">
                         </div>
                         <div>
                             <h3 class="font-bold text-slate-900">{{ $rental->costume->name }}</h3>

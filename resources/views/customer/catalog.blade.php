@@ -76,6 +76,7 @@
                     <a href="{{ route('costumes.show', $costume) }}" class="relative block aspect-[4/3] overflow-hidden bg-slate-100">
                         <img src="{{ $costume->image_url }}" alt="{{ $costume->name }}"
                              loading="lazy"
+                             onerror="this.onerror=null;this.src='{{ asset('images/costume-placeholder.svg') }}';"
                              class="h-full w-full object-cover transition duration-300 group-hover:scale-105">
                         <span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border border-white/40 bg-white/90 px-2.5 py-0.5 text-xs font-semibold text-slate-700 backdrop-blur">
                             <i class="ri-ruler-line"></i> {{ $costume->size }}
