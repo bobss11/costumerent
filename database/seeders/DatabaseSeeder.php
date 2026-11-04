@@ -250,7 +250,7 @@ class DatabaseSeeder extends Seeder
         $pickedCostume = $costumes['jawa'];
         $pickedStart = now()->subDays(1)->startOfDay();
         $pickedEnd = now()->addDays(2)->startOfDay();
-        $pickedDays = $pickedStart->diffInDays($pickedEnd);
+        $pickedDays = $pickedStart->diffInDays($pickedEnd) + 1;
         $pickedQty = 1;
         $pickedSubtotal = $pickedCostume->rental_price_per_day * $pickedDays * $pickedQty;
         $pickedDeposit = $pickedCostume->deposit_amount * $pickedQty;
@@ -288,7 +288,7 @@ class DatabaseSeeder extends Seeder
         $pendingCostume = $costumes['bodo'];
         $pendingStart = now()->addDays(5)->startOfDay();
         $pendingEnd = now()->addDays(7)->startOfDay();
-        $pendingDays = $pendingStart->diffInDays($pendingEnd);
+        $pendingDays = $pendingStart->diffInDays($pendingEnd) + 1;
         $pendingQty = 2;
         $pendingSubtotal = $pendingCostume->rental_price_per_day * $pendingDays * $pendingQty;
         $pendingDeposit = $pendingCostume->deposit_amount * $pendingQty;
@@ -315,7 +315,7 @@ class DatabaseSeeder extends Seeder
         $returnedCostume = $costumes['bungtomo'];
         $returnedStart = now()->subDays(10)->startOfDay();
         $returnedEnd = now()->subDays(7)->startOfDay();
-        $returnedDays = $returnedStart->diffInDays($returnedEnd);
+        $returnedDays = $returnedStart->diffInDays($returnedEnd) + 1;
         $returnedQty = 1;
         $returnedSubtotal = $returnedCostume->rental_price_per_day * $returnedDays * $returnedQty;
         $returnedDeposit = $returnedCostume->deposit_amount * $returnedQty;
