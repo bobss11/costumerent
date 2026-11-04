@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ReturnInspectionController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Customer\CatalogController;
 use App\Http\Controllers\Customer\RentalController;
+use App\Http\Controllers\InvoiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +33,16 @@ Route::middleware('guest')->group(function () {
 Route::post('/logout', [LoginController::class, 'logout'])
     ->middleware('auth')
     ->name('logout');
+
+/*
+|--------------------------------------------------------------------------
+| Invoice / handover proof (print-ready) — keyed by rental_code.
+| Viewable by the owning customer or an admin/staff (enforced in controller).
+|--------------------------------------------------------------------------
+*/
+Route::get('/invoice/{rental_code}', [InvoiceController::class, 'show'])
+    ->middleware('auth')
+    ->name('invoice.show');
 
 /*
 |--------------------------------------------------------------------------
