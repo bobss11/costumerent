@@ -122,95 +122,101 @@ class DatabaseSeeder extends Seeder
     protected function seedCostumes(array $categories): array
     {
         $data = [
+            // 1. Set Beskap & Kebaya Adat Jawa Solo (spec item 1).
             'jawa' => [
                 'category' => 'adat',
                 'code' => 'CST-JWA-01',
-                'name' => 'Beskap & Kebaya Adat Jawa',
+                'name' => 'Set Beskap & Kebaya Adat Jawa Solo',
                 'size' => 'L',
                 'gender' => 'Unisex',
-                'rental_price_per_day' => 85000.00,
-                'deposit_amount' => 300000.00,
+                'rental_price_per_day' => 150000.00,
+                'deposit_amount' => 100000.00,
                 'late_fee_per_day' => 25000.00,
                 'stock_total' => 6,
                 'stock_available' => 6,
-                'accessories_included' => 'Blangkon, keris imitasi, selop, stagen, jarik batik',
+                'accessories_included' => 'Beskap, Kebaya Beludru, Kain Jarik, Blangkon, Keris Properti',
                 'image_url' => 'https://images.unsplash.com/photo-1601933470928-c6ecbf0f43f3?auto=format&fit=crop&w=800&q=80',
-                'description' => 'Set busana adat Jawa lengkap untuk pernikahan tradisional maupun acara budaya.',
+                'description' => 'Set busana adat Jawa Solo lengkap untuk pernikahan tradisional maupun acara budaya.',
             ],
-            'bali' => [
+            // 2. Pakaian Adat Koto Gadang Minangkabau (spec item 2).
+            'minang' => [
                 'category' => 'adat',
-                'code' => 'CST-BAL-02',
-                'name' => 'Payas Agung Adat Bali',
+                'code' => 'CST-MNG-02',
+                'name' => 'Pakaian Adat Koto Gadang Minangkabau',
                 'size' => 'M',
                 'gender' => 'Wanita',
-                'rental_price_per_day' => 95000.00,
-                'deposit_amount' => 350000.00,
-                'late_fee_per_day' => 30000.00,
+                'rental_price_per_day' => 220000.00,
+                'deposit_amount' => 150000.00,
+                'late_fee_per_day' => 35000.00,
                 'stock_total' => 4,
                 'stock_available' => 4,
-                'accessories_included' => 'Mahkota gelungan, kipas, selendang prada, sabuk emas',
+                'accessories_included' => 'Baju Kurung, Tingkuluak Talakuang, Songket, Kalung Gadang',
                 'image_url' => 'https://images.unsplash.com/photo-1555212697-194d092e3b8f?auto=format&fit=crop&w=800&q=80',
-                'description' => 'Busana Payas Agung khas Bali dengan ornamen emas untuk upacara dan foto prewedding.',
+                'description' => 'Busana adat Koto Gadang khas Minangkabau dengan songket dan tingkuluak khas.',
             ],
-            'barong' => [
-                'category' => 'karnaval',
-                'code' => 'CST-KRN-03',
-                'name' => 'Kostum Barong Karnaval',
+            // 3. Baju Bodo Adat Bugis Makassar (spec item 3).
+            'bodo' => [
+                'category' => 'adat',
+                'code' => 'CST-BGS-03',
+                'name' => 'Baju Bodo Adat Bugis Makassar',
                 'size' => 'All Size',
-                'gender' => 'Unisex',
-                'rental_price_per_day' => 120000.00,
-                'deposit_amount' => 400000.00,
-                'late_fee_per_day' => 35000.00,
-                'stock_total' => 3,
-                'stock_available' => 3,
-                'accessories_included' => 'Topeng barong, jubah bulu, sarung tangan, hiasan kepala',
-                'image_url' => 'https://images.unsplash.com/photo-1514446268004-2d0b9e9d2d5c?auto=format&fit=crop&w=800&q=80',
-                'description' => 'Kostum barong berukuran besar yang mencolok untuk pawai dan karnaval budaya.',
-            ],
-            'penari' => [
-                'category' => 'karnaval',
-                'code' => 'CST-TAR-04',
-                'name' => 'Kostum Tari Merak',
-                'size' => 'S',
                 'gender' => 'Wanita',
-                'rental_price_per_day' => 75000.00,
-                'deposit_amount' => 250000.00,
-                'late_fee_per_day' => 20000.00,
+                'rental_price_per_day' => 135000.00,
+                'deposit_amount' => 100000.00,
+                'late_fee_per_day' => 25000.00,
                 'stock_total' => 8,
                 'stock_available' => 8,
-                'accessories_included' => 'Sayap merak, mahkota, gelang tangan, selendang warna-warni',
+                'accessories_included' => 'Baju Bodo, Sarung Sutra, Mahkota Saloko, Gelang Panjang',
                 'image_url' => 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
-                'description' => 'Kostum Tari Merak dengan sayap mekar untuk pertunjukan tari tradisional.',
+                'description' => 'Busana adat Baju Bodo khas Bugis Makassar dengan sarung sutra dan mahkota saloko.',
             ],
-            'ksatria' => [
-                'category' => 'cosplay',
-                'code' => 'CST-CSP-05',
-                'name' => 'Kostum Ksatria Fantasi',
+            // 4. Kostum Karnaval Garuda Nusantara Gold (spec item 4).
+            'garuda' => [
+                'category' => 'karnaval',
+                'code' => 'CST-KRN-04',
+                'name' => 'Kostum Karnaval Garuda Nusantara Gold',
+                'size' => 'L',
+                'gender' => 'Unisex',
+                'rental_price_per_day' => 350000.00,
+                'deposit_amount' => 250000.00,
+                'late_fee_per_day' => 50000.00,
+                'stock_total' => 3,
+                'stock_available' => 3,
+                'accessories_included' => 'Sayap Punggung, Mahkota Garuda, Chestplate, Pelindung Lengan',
+                'image_url' => 'https://images.unsplash.com/photo-1514446268004-2d0b9e9d2d5c?auto=format&fit=crop&w=800&q=80',
+                'description' => 'Kostum karnaval Garuda Nusantara emas yang megah untuk pawai dan pertunjukan.',
+            ],
+            // 5. Kostum Pejuang Kemerdekaan / Bung Tomo (spec item 5).
+            'bungtomo' => [
+                'category' => 'profesi',
+                'code' => 'CST-PRF-05',
+                'name' => 'Kostum Pejuang Kemerdekaan / Bung Tomo',
                 'size' => 'XL',
                 'gender' => 'Pria',
-                'rental_price_per_day' => 110000.00,
-                'deposit_amount' => 380000.00,
-                'late_fee_per_day' => 30000.00,
-                'stock_total' => 5,
-                'stock_available' => 5,
-                'accessories_included' => 'Zirah plastik, pedang imitasi, perisai, jubah, sarung tangan',
-                'image_url' => 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80',
-                'description' => 'Kostum ksatria fantasi lengkap dengan zirah untuk cosplay dan acara bertema.',
-            ],
-            'dokter' => [
-                'category' => 'profesi',
-                'code' => 'CST-PRF-06',
-                'name' => 'Set Busana Profesi Dokter',
-                'size' => 'M',
-                'gender' => 'Unisex',
-                'rental_price_per_day' => 60000.00,
-                'deposit_amount' => 200000.00,
-                'late_fee_per_day' => 15000.00,
+                'rental_price_per_day' => 95000.00,
+                'deposit_amount' => 75000.00,
+                'late_fee_per_day' => 20000.00,
                 'stock_total' => 10,
                 'stock_available' => 10,
-                'accessories_included' => 'Jas lab, stetoskop mainan, name tag, masker kain',
+                'accessories_included' => 'Kemeja Safari, Celana, Sabuk Kulit, Topi Peci Pejuang, Pin Garuda',
                 'image_url' => 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80',
-                'description' => 'Set busana profesi dokter untuk drama edukasi, karnaval profesi, dan foto wisuda.',
+                'description' => 'Kostum pejuang kemerdekaan bergaya Bung Tomo untuk drama sejarah dan peringatan kemerdekaan.',
+            ],
+            // 6. Kimono Haori Tradisional Jepang (spec item 6).
+            'kimono' => [
+                'category' => 'cosplay',
+                'code' => 'CST-CSP-06',
+                'name' => 'Kimono Haori Tradisional Jepang',
+                'size' => 'M',
+                'gender' => 'Unisex',
+                'rental_price_per_day' => 125000.00,
+                'deposit_amount' => 100000.00,
+                'late_fee_per_day' => 25000.00,
+                'stock_total' => 5,
+                'stock_available' => 5,
+                'accessories_included' => 'Kimono, Obi Belt, Geta Sandals, Kipas Lipat',
+                'image_url' => 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80',
+                'description' => 'Kimono Haori tradisional Jepang untuk cosplay, foto bertema, dan acara budaya Jepang.',
             ],
         ];
 
@@ -279,7 +285,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // 2. Pending rental (unpaid, awaiting confirmation).
-        $pendingCostume = $costumes['penari'];
+        $pendingCostume = $costumes['bodo'];
         $pendingStart = now()->addDays(5)->startOfDay();
         $pendingEnd = now()->addDays(7)->startOfDay();
         $pendingDays = $pendingStart->diffInDays($pendingEnd);
@@ -306,7 +312,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // 3. Returned rental (with return inspection + invoice, includes late + damage calc).
-        $returnedCostume = $costumes['dokter'];
+        $returnedCostume = $costumes['bungtomo'];
         $returnedStart = now()->subDays(10)->startOfDay();
         $returnedEnd = now()->subDays(7)->startOfDay();
         $returnedDays = $returnedStart->diffInDays($returnedEnd);
@@ -348,7 +354,7 @@ class DatabaseSeeder extends Seeder
             'late_days' => $lateDays,
             'late_fee_amount' => $lateFee,
             'condition_status' => 'minor_stain',
-            'inspection_notes' => 'Terdapat noda ringan pada jas lab, dikenakan denda kebersihan.',
+            'inspection_notes' => 'Terdapat noda ringan pada kemeja safari, dikenakan denda kebersihan.',
             'damage_penalty_fee' => $damagePenalty,
             'total_deduction' => $totalDeduction,
             'deposit_refunded' => $depositRefunded,
