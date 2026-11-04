@@ -1,11 +1,18 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Customer\CatalogController;
+use App\Http\Controllers\Customer\RentalController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+|--------------------------------------------------------------------------
+| Public catalog (landing)
+|--------------------------------------------------------------------------
+*/
+Route::get('/', [CatalogController::class, 'index'])->name('customer.catalog');
+Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
+Route::get('/costumes/{costume}', [CatalogController::class, 'show'])->name('costumes.show');
 
 /*
 |--------------------------------------------------------------------------
@@ -42,5 +49,6 @@ Route::middleware(['auth', 'role:customer'])
     ->prefix('customer')
     ->name('customer.')
     ->group(function () {
-        // Catalog, my rentals (FEAT-003/004/005).
+        Route::get('/rentals', [RentalController::class, 'index'])->name('rentals.index');
+        Route::post('/rentals', [RentalController::class, 'store'])->name('rentals.store');
     });
